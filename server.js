@@ -40,7 +40,7 @@ function ensureAuthenticated(req, res, next) {
 	}
 }
 
-// app.use('/dashboard', ensureAuthenticated)
+app.use('/dashboard', ensureAuthenticated)
 
 app.get('/dashboard', (req, res) => {
 	res.sendFile('views/dashboard.html', { root: '.' })
