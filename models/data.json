@@ -1,0 +1,22 @@
+[
+	{ "id": "1", "item": "Smartphone" },
+	{ "id": "2", "item": "Laptop" },
+	{ "id": "3", "item": "Smartwatch" },
+	{ "id": "4", "item": "Tablet" },
+	{ "id": "5", "item": "Headphones" },
+	{ "id": "6", "item": "Camera" },
+	{ "id": "7", "item": "Gaming Console" },
+	{ "id": "8", "item": "E-reader" },
+	{ "id": "9", "item": "Speaker" },
+	{ "id": "10", "item": "Wireless Mouse" },
+	{ "id": "11", "item": "Printers" },
+	{ "id": "12", "item": "Flash Drive" },
+	{ "id": "13", "item": "Smart Home Hub" },
+	{ "id": "14", "item": "Drones" },
+	{ "id": "15", "item": "Portable Charger" },
+	{ "id": "16", "item": "Webcam" },
+	{ "id": "17", "item": "Projector" },
+	{ "id": "18", "item": "Earbuds" },
+	{ "id": "19", "item": "3D Printer" },
+	{ "id": "20", "item": "Wireless Router" }
+]
