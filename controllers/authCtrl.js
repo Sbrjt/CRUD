@@ -19,7 +19,7 @@ async function login(req, res) {
 		if (await bcrypt.compare(pwd, foundUsr.pwd)) {
 			req.session.authenticated = true
 			// return res.redirect('/dashboard')
-			return res.send(`Welcome back, ${usr}! Explore the dashboard.`)
+			return res.send(`Welcome, ${usr}! Explore the dashboard.`)
 		}
 	}
 	res.send("Username or password didn't match. Try again")
