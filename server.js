@@ -40,6 +40,15 @@ function ensureAuthenticated(req, res, next) {
 	}
 }
 
+// middleware to check for admin
+function isAdmin(req, res, next) {
+	if (req.session.isAdmin) {
+		next()
+	} else {
+		res.send('Admin rights required.')
+	}
+}
+
 app.use('/dashboard', ensureAuthenticated)
 
 app.get('/dashboard', (req, res) => {
@@ -51,8 +60,8 @@ app.get('/dashboard/all', getAllProducts)
 app
 	.route('/dashboard/product')
 	.get(getProductById)
-	.post(addProduct)
-	.delete(deleteProduct)
+	.post(isAdmin, addProduct)
+	.delete(isAdmin, deleteProduct)
 
 // 404 page
 app.get('/*', (req, res) => {
