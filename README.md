@@ -1,17 +1,30 @@
-This is a simple Express.js application for creating a basic CRUD API with authentication. It is deployed on [Render](https://crud-83mz.onrender.com/) and follows the MVC model.
+This is a simple Express.js application for creating a basic CRUD API with user authentication and authorization. It follows the MVC model, incorporates session-based authentication and uses a sqlite database. It is deployed on [Render](https://crud-83mz.onrender.com/).
+
+### End points
+
+* GET /login: Displays the login page.
+* POST /login: Processes user login.
+* POST /register: Registers a new user.
+* GET /dashboard/all: Retrieves all products.
+* GET /dashboard/product: Retrieves a product by ID (with query parameter /dashboard/product?id=xyz).
+* POST /dashboard/product: Adds a new product (requires admin rights).
+* DELETE /dashboard/product: Deletes a product (requires admin rights).
+
+For admin rights, use username *admin* and password *1234*.
+
+### Project Structure
 
 ```
 root
 │
 ├── server.js 
 │
-├── models/
-│   ├── usr.json            
-│   ├── data.json
+├── models/           
+│   ├── data.db
 │
 ├── views/            
 │   ├── auth.html
-│   ├── dashboard.js
+│   ├── dashboard.html
 |
 ├── controllers/            
 │   ├── authCtrl.js
@@ -21,19 +34,5 @@ root
 ```
 
 ### Installation
-Clone/download the repo. Install dependencies (npm install). Start the server. (The server will be running at http://localhost:3000)
-
-### End points:
-
-Dashboard:
-* GET /dashboard/product?id=xyz (Search for a product by ID)
-* GET /dashboard/all (Retrieve all products)
-* POST /dashboard/product?id=xyz (Add a new product)
-* DELETE /dashboard/product?id=xyz (Delete a product by ID)
-
-Authentication:
-* POST /register
-* POST /login
-
-
+Clone/download the repo. Install dependencies (npm install). Start the server (on http://localhost:3000).
 
