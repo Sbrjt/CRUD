@@ -84,6 +84,19 @@
     </footer>
 
     <script>
+        // search
+        document.getElementById('form-1').addEventListener('submit', async e => {
+            e.preventDefault()
+
+            const id = document.getElementById('id-1').value
+            const p = document.getElementById('p-1')
+
+            const res = await fetch(`/dashboard/product?id=${id}`)
+            p.innerHTML = await res.text()
+
+            timeout(p)
+        })
+
         // show all
         document.getElementById('btn-2').addEventListener('click', async () => {
             const tb = document.getElementById('tb')
@@ -96,19 +109,6 @@
                 row.insertCell().innerHTML = i.id
                 row.insertCell().innerHTML = i.item
             }
-        })
-
-        // search
-        document.getElementById('form-1').addEventListener('submit', async e => {
-            e.preventDefault()
-
-            const id = document.getElementById('id-1').value
-            const p = document.getElementById('p-1')
-
-            const res = await fetch(`/dashboard/product?id=${id}`)
-            p.innerHTML = await res.text()
-
-            timeout(p)
         })
 
         // add

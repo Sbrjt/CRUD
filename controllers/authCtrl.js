@@ -23,7 +23,7 @@ async function login(req, res) {
 					req.session.isAdmin = true
 				}
 
-				return res.send(`Welcome, ${usr}! Go to the dashboard.`
+				return res.send(`Welcome, ${usr}! Click on Go to Dashboard.`
 				)
 			}
 		}

@@ -45,7 +45,7 @@ function isAdmin(req, res, next) {
 	if (req.session.isAdmin) {
 		next()
 	} else {
-		res.send('Admin rights required.')
+		res.send('Admin login required.')
 	}
 }
 
