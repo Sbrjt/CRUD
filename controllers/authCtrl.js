@@ -48,7 +48,7 @@ async function register(req, res) {
 
 		const hashedPassword = await bcrypt.hash(pwd, 10)
 
-		db.run('INSERT INTO users VALUES (?, ?, true)', usr, hashedPassword, (err) => {
+		db.run('INSERT INTO users VALUES (?, ?, NULL)', usr, hashedPassword, (err) => {
 			if (err) return res.send('Error')
 
 			res.send('Registration successful. Please login.')
